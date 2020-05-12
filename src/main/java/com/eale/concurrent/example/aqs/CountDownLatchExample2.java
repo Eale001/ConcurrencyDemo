@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author Administrator
@@ -13,7 +14,7 @@ import java.util.concurrent.Executors;
  * @Version 1.0
  **/
 @Slf4j
-public class CountDownLatchExample1 {
+public class CountDownLatchExample2 {
 
     private final static int threadTotal = 200;
 
@@ -33,7 +34,7 @@ public class CountDownLatchExample1 {
                 }
             });
         }
-        countDownLatch.await();
+        countDownLatch.await(10, TimeUnit.MILLISECONDS);
         log.info("finish");
         executorService.shutdown();
 
@@ -41,9 +42,9 @@ public class CountDownLatchExample1 {
     }
 
     private static void test(int threadNum) throws InterruptedException {
-        Thread.sleep(100);
+        Thread.sleep(9);
         log.info("{}",threadNum);
-        Thread.sleep(100);
+        Thread.sleep(9);
 
     }
 

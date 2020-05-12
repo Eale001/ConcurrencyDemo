@@ -3,7 +3,7 @@ package com.eale.concurrent.example.threadLocal;
 /**
  * @Author Administrator
  * @Date 2020/4/19
- * @Description //TODO
+ * @Description //
  * @Version 1.0
  **/
 public class RequestHolder {
