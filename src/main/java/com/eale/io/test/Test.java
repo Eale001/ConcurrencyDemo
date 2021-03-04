@@ -1,5 +1,9 @@
 package com.eale.io.test;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * @Author Admin
  * @Date 2021/3/1
@@ -13,6 +17,11 @@ public class Test {
 
 
         System.out.println(longestPalindrome("babab"));
+
+        Map<String,String> map = new HashMap<>(8);
+
+        Map<String,String> concurrentHashMap = new ConcurrentHashMap<>(8);
+
     }
 
     public static String longestPalindrome(String s) {
