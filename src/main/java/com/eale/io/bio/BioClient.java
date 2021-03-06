@@ -16,7 +16,7 @@ public class BioClient {
 
     private final static String ADDRESS = "127.0.0.1";
 
-    private final static Integer PORT = 33033;
+    private final static Integer PORT = 33034;
 
 
     public static void main(String[] args) {

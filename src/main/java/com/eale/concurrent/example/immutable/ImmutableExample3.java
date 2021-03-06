@@ -1,16 +1,11 @@
 package com.eale.concurrent.example.immutable;
 
-import com.eale.concurrent.annoations.NotThreadSafe;
 import com.eale.concurrent.annoations.ThreadSafe;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @Author Administrator
