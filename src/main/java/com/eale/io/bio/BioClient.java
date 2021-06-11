@@ -24,14 +24,12 @@ public class BioClient {
         Socket socket = null;
         BufferedReader in = null;
         PrintWriter out = null;
-
         try {
             socket = new Socket(ADDRESS,PORT);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(),true);
             out.println("接收到客户端的请求数据...");
             out.println("你好服务器我是客户端！！！");
-
             String s = in.readLine();
             System.out.println("client :"+ s);
             in.close();
