@@ -2,6 +2,7 @@ package com.eale.io.netty;
 
 import com.eale.io.netty.handler.HttpHandler;
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
@@ -55,7 +56,8 @@ public class HttpServer {
                 })
                 .option(ChannelOption.SO_BACKLOG,128) // 确定排队的连接数
                 .childOption(ChannelOption.SO_KEEPALIVE,Boolean.TRUE);
-        bootstrap.bind(port).sync();
+        ChannelFuture sync = bootstrap.bind(port).sync();
+        sync.channel().closeFuture().sync();
     }
 
 
