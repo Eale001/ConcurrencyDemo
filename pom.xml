@@ -112,6 +112,12 @@
             <version>28.0-jre</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
