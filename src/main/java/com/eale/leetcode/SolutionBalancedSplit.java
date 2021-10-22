@@ -66,6 +66,23 @@ public class SolutionBalancedSplit {
         return total;
     }
 
+    public static int countCharTwo(String str){
+        char[] chars = str.toCharArray();
+        int total = 0;
+        int count = 0;
+        for (int i = 0; i < chars.length; i++) {
+            if ('L' == chars[i]){
+                count++;
+            }else {
+                count--;
+            }
+            if (count == 0){
+                total ++;
+            }
+        }
+        return total;
+    }
+
     public static void main(String[] args) {
         System.out.println(countChar("RLRRLLRLRL"));
         System.out.println(countChar("RLLLLRRRLR"));
