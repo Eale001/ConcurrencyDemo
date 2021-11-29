@@ -1,4 +1,4 @@
-package com.eale.rocketmq.order;
+package com.eale.mq.rocketmq.order;
 
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeOrderlyContext;

@@ -122,6 +122,12 @@ public class Solution {
 
 
     public static void main(String[] args) {
+
+        for (int i = 0; i < args.length; i++) {
+            System.out.println(" 参数： "+ args[i]);
+        }
+
+
         int[] arr = new int[]{1,3,5,7,2,4,6,8};
         int[] ints = smallestK(arr, 4);
         int[] que = smallestKQue(arr, 4);

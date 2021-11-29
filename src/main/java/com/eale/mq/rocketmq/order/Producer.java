@@ -1,6 +1,6 @@
-package com.eale.rocketmq.order;
+package com.eale.mq.rocketmq.order;
 
-import com.eale.rocketmq.model.OrderStep;
+import com.eale.mq.rocketmq.model.OrderStep;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.MessageQueueSelector;
 import org.apache.rocketmq.client.producer.SendResult;

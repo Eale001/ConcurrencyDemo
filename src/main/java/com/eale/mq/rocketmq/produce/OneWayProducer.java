@@ -1,4 +1,4 @@
-package com.eale.rocketmq.produce;
+package com.eale.mq.rocketmq.produce;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.common.message.Message;

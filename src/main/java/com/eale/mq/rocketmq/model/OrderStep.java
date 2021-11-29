@@ -1,4 +1,4 @@
-package com.eale.rocketmq.model;
+package com.eale.mq.rocketmq.model;
 
 /**
  * 订单的步骤
