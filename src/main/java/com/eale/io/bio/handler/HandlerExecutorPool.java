@@ -5,8 +5,6 @@ import java.util.concurrent.*;
 /**
  * @Author Administrator
  * @Date 2021/2/25
- * @Description //
- * @Version 1.0
  **/
 public class HandlerExecutorPool {
 

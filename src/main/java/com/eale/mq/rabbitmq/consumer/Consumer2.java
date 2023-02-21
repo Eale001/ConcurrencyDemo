@@ -16,10 +16,10 @@ public class Consumer2 {
     public static ConnectionFactory getConnectionFactory() {
         // 创建连接工程，下面给出的是默认的case
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("192.168.99.100");
+        factory.setHost("192.168.0.239");
         factory.setPort(5672);
-        factory.setUsername("guest");
-        factory.setPassword("guest");
+        factory.setUsername("admin");
+        factory.setPassword("123456");
         factory.setVirtualHost("/");
         return factory;
     }

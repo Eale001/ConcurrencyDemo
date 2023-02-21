@@ -5,10 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Semaphore;
+import java.util.Queue;
+import java.util.concurrent.*;
 
 /**
  * @Author Administrator
@@ -21,6 +19,8 @@ import java.util.concurrent.Semaphore;
 public class ArrayListExample {
 
     private static List<Integer> list = new ArrayList<>();
+
+    private static Queue<Integer> blockList = new LinkedBlockingQueue<Integer>();
 
     // 请求总数
     public static int clintTotal  = 5000;

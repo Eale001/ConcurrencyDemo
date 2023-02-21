@@ -5,6 +5,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.*;
 import io.netty.util.AsciiString;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @Author HLD
@@ -12,6 +13,7 @@ import io.netty.util.AsciiString;
  * @Description // HttpHandler 处理器
  * @Version 1.0
  **/
+@Slf4j
 public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
     private AsciiString contentType = HttpHeaderValues.TEXT_PLAIN;
@@ -32,6 +34,7 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        log.info("message : {}",msg.toString());
         if (msg instanceof HttpRequest) {
 
             // 请求，解码器将请求转换成HttpRequest对象
@@ -60,10 +63,7 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-//        System.out.println("channel Read complete");
-//        super.channelReadComplete(ctx);
-////        ctx.flush(); // 4
-//        System.out.println("刷新了撒");
+        super.channelReadComplete(ctx);
     }
 
     @Override

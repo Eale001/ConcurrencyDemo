@@ -1,4 +1,4 @@
-package com.eale.io.test;
+package com.eale.leetcode;
 
 import java.util.HashMap;
 import java.util.Map;

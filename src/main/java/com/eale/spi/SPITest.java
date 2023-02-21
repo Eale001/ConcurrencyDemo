@@ -3,8 +3,6 @@ package com.eale.spi;
 import com.eale.spi.service.SPIService;
 import sun.misc.Service;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.util.Iterator;
 import java.util.ServiceLoader;
 
@@ -29,17 +27,17 @@ public class SPITest {
             ser.execute();
         }
 
-        String url = "jdbc:mysql:///consult?serverTimezone=UTC";
-        String user = "root";
-        String password = "root";
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection(url, user, password);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        String url = "jdbc:mysql:///consult?serverTimezone=UTC";
+//        String user = "root";
+//        String password = "root";
+//
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Connection connection = DriverManager.getConnection(url, user, password);
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
     }
 

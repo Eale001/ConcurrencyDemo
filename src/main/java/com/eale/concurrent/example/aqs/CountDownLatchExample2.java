@@ -1,11 +1,9 @@
 package com.eale.concurrent.example.aqs;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.asm.ClassWriter;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * @Author Administrator
@@ -21,6 +19,18 @@ public class CountDownLatchExample2 {
     public static void main(String[] args) throws InterruptedException {
 
         ExecutorService executorService = Executors.newCachedThreadPool();
+
+        ThreadFactory threadFactory = new ThreadFactory() {
+            @Override
+            public Thread newThread(Runnable runnable) {
+                Thread thread = new Thread(runnable);
+                thread.setName("");
+                thread.setDaemon(true);
+                thread.setPriority(-1);
+                return thread;
+            }
+        };
+
         final CountDownLatch countDownLatch = new CountDownLatch(threadTotal);
         for (int i =0 ; i< threadTotal; i++){
             final int threadNum = i;
@@ -45,6 +55,8 @@ public class CountDownLatchExample2 {
         Thread.sleep(9);
         log.info("{}",threadNum);
         Thread.sleep(9);
+
+        ClassWriter classWriter = new ClassWriter(12);
 
     }
 

@@ -28,6 +28,10 @@ public class Test1 {
                 return next.getKey();
             }
         }
+
+        String str = "12346";
+        str.substring(0,1);
+
         return 0;
     }
 

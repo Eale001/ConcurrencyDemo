@@ -16,6 +16,7 @@ public class CallableThread {
         @Override
         public Object call() throws Exception {
 
+            System.out.println("这个县城执行了");
             return task.toString();
         }
     };

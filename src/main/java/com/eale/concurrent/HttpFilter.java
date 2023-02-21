@@ -10,8 +10,6 @@ import java.io.IOException;
 /**
  * @Author Administrator
  * @Date 2020/4/19
- * @Description //TODO
- * @Version 1.0
  **/
 @Slf4j
 public class HttpFilter implements Filter {
